@@ -1,0 +1,2673 @@
+@charset "UTF-8";
+.page {
+  min-width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Ubuntu-Regular.woff") format("woff");
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+  color: #000;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #ebebeb;
+  background-size: cover;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  scrollbar-width: none;
+  box-sizing: border-box;
+}
+
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+
+/* Document
+   ========================================================================== */
+
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+
+/* Sections
+   ========================================================================== */
+
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+
+/* Grouping content
+   ========================================================================== */
+
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+
+/* Text-level semantics
+   ========================================================================== */
+
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+
+/* Embedded content
+   ========================================================================== */
+
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+
+/* Forms
+   ========================================================================== */
+
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+
+/* Interactive
+   ========================================================================== */
+
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+
+/* Misc
+   ========================================================================== */
+
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+.menu__wrap-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 7px;
+}
+
+.menu__wrap-pagination-burger {
+  margin-left: auto;
+  margin-right: 8px;
+  margin-top: 25px;
+}
+
+.menu__wrap-pagination-burger-icon {
+  background: linear-gradient(to right, #000, #000) no-repeat;
+  background-position: center left;
+  background-size: 85% 4px;
+  border: solid #000;
+  border-width: 4px 0;
+  height: 24px;
+  width: 24px;
+}
+
+.menu__wrap-pagination-nav {
+  z-index: -999;
+  transition: 0.25s ease-in-out;
+  opacity: 0;
+  height: 0;
+  width: 100%;
+  margin-top: 0;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+}
+
+.menu__wrap-pagination-nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__wrap-pagination-nav-list-item {
+  padding: 15px 0;
+}
+
+.menu__wrap-pagination-nav-list-item-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.menu__wrap-pagination-whatsapp {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.menu__wrap-pagination-whatsapp-icon {
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 5px;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.55;
+  font-weight: 600;
+  border-radius: 20px;
+  background-color: #43d854;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.menu__wrap-prokat {
+  background-image: url("../img/mini_2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 564px;
+}
+
+.menu__wrap-prokat-title {
+  padding-top: 20px;
+  padding-left: 7px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.menu__wrap-prokat-title::before {
+  content: "в Грозном";
+  position: absolute;
+  font-size: 21px;
+  font-family: "Ubuntu", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 700;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  margin-left: 150px;
+  margin-top: 33px;
+  text-transform: none;
+}
+
+.menu__wrap-prokat-title--one {
+  text-transform: none;
+}
+
+.menu__wrap-prokat-title--two {
+  padding-left: 22px;
+}
+
+.menu__wrap-prokat-description {
+  width: 291px;
+  height: 308px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 213px;
+  z-index: 1;
+}
+
+.menu__wrap-prokat-description::before {
+  content: "";
+  position: absolute;
+  width: 291px;
+  height: 235px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c31500;
+  border-radius: 20px 20px 0 0;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.menu__wrap-prokat-description-name {
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  padding-top: 34px;
+}
+
+.active {
+  z-index: 2;
+  opacity: 1;
+  margin-top: 25px;
+  height: auto;
+  transition: 0.25s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  .menu__wrap-prokat-title {
+    width: 1015px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 58px;
+    position: relative;
+    line-height: 1;
+    padding-top: 60px;
+  }
+  .menu__wrap-prokat-title::before {
+    content: "в Грозном";
+    position: absolute;
+    font-size: 21px;
+    font-family: "Ubuntu", Arial, sans-serif;
+    line-height: 1.55;
+    font-weight: 700;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    margin-left: 274px;
+    margin-top: 81px;
+    text-transform: none;
+  }
+  .menu__wrap-prokat-title--one {
+    text-transform: none;
+  }
+  .menu__wrap-prokat-description {
+    width: 976px;
+    text-align: left;
+    margin-top: 95px;
+  }
+  .menu__wrap-prokat-description::before {
+    left: -15px;
+    width: 307px;
+  }
+  .menu__wrap-prokat-description-name {
+    text-align: center;
+    width: 275px;
+  }
+  .menu__wrap-pagination {
+    justify-content: center;
+  }
+  .menu__wrap-pagination-burger {
+    display: none;
+  }
+  .menu__wrap-pagination-nav {
+    opacity: 1;
+    z-index: 1;
+    height: auto;
+    text-align: left;
+    width: auto;
+  }
+  .menu__wrap-pagination-nav-list {
+    display: flex;
+  }
+  .menu__wrap-pagination-nav-list-item {
+    padding: 30px 12px;
+    font-weight: 900;
+  }
+  .menu__wrap-pagination-nav-list-item-link {
+    font-size: 19px;
+  }
+  .menu__wrap-pagination-whatsapp {
+    display: block;
+    margin-top: 12px;
+    width: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .menu__wrap-pagination {
+    padding: 0;
+  }
+  .menu__wrap-prokat-title {
+    width: 1150px;
+    text-transform: uppercase;
+    font-size: 66px;
+    padding-top: 68px;
+    line-height: 1;
+    position: relative;
+  }
+  .menu__wrap-prokat-title--one {
+    text-transform: none;
+  }
+  .menu__wrap-prokat-title--two {
+    margin-left: 47px;
+  }
+  .menu__wrap-prokat-title::before {
+    content: "в Грозном";
+    position: absolute;
+    font-size: 21px;
+    font-family: "Ubuntu", Arial, sans-serif;
+    line-height: 1.55;
+    font-weight: 700;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    margin-left: 324px;
+    margin-top: 95px;
+    text-transform: none;
+  }
+  .menu__wrap-prokat-description {
+    width: 1115px;
+    margin-top: 113px;
+  }
+  .menu__wrap-prokat-description::before {
+    height: 185px;
+  }
+  .menu__wrap-prokat-description-name {
+    padding-top: 15px;
+  }
+  .menu__wrap-pagination {
+    width: 1154px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .menu__wrap-pagination-whatsapp-icon {
+    height: 46px;
+    font-size: 20px;
+  }
+  .menu__wrap-pagination-nav-list-item {
+    padding: 30px 20px;
+  }
+}
+
+.take {
+  width: 100%;
+}
+
+.take__wrap {
+  padding: 7px;
+  text-align: center;
+}
+
+.take__wrap-filter-desk {
+  display: none;
+}
+
+.take__wrap-filter-select {
+  width: 85%;
+  background-color: #c31500;
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.take__wrap-filter-items {
+  border: none;
+  outline: none;
+  color: #c31500;
+  background-color: transparent;
+  padding: 10px 10px;
+  position: relative;
+}
+
+.take__wrap-filter-items:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 36px;
+  right: -5px;
+  top: 0;
+  background-color: #c31500;
+}
+
+.take__wrap-title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.take__wrap-auto {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.take__wrap-auto-models {
+  display: none;
+}
+
+.take__wrap-auto-models-title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.take__wrap-auto-models-price {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #c31500;
+}
+
+.take__wrap-auto-models-btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+
+.take__wrap-auto-models-btns-more {
+  padding-top: 13px;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  width: 120px;
+  height: 45px;
+  outline: none;
+  background-color: #c31500;
+  font-weight: bold;
+}
+
+.take__wrap-auto-models-btns-book {
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  width: 135px;
+  height: 45px;
+  outline: none;
+  background-color: #c31500;
+  font-weight: bold;
+}
+
+@media (max-width: 499px) {
+  .take__wrap-auto-models-btns {
+    margin: 5px !important;
+  }
+  .take__wrap-auto-models-info {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 500px) {
+  .take__wrap-auto-models--exclusive-1--size {
+    margin-top: 78px !important;
+  }
+  .mar {
+    margin-top: 79px !important;
+  }
+  .rama {
+    margin-top: 23px !important;
+  }
+  .take__wrap-auto-models:nth-child(2n) {
+    margin-top: 8px;
+  }
+  .take__wrap-auto-models:nth-child(4n) {
+    margin-top: 23px;
+  }
+  .take__wrap-auto-models:nth-child(6n) {
+    margin-top: 40px;
+  }
+  .take__wrap-auto-models:nth-child(8n) {
+    margin-top: 43px;
+  }
+  .take__wrap-filter {
+    width: 460px;
+    margin: 0 auto;
+  }
+  .take__wrap-auto {
+    display: flex;
+    flex-wrap: wrap;
+    width: 490px;
+    margin: 0 auto;
+  }
+  .take__wrap-auto-models {
+    width: 45.5%;
+    margin: 24px 11px;
+  }
+  .take__wrap-auto-models-title {
+    line-height: 1.5;
+  }
+  .take__wrap-auto-models-title--size {
+    margin: 0;
+  }
+  .take__wrap-auto-models-title--monde {
+    margin: 0;
+    margin-top: 38px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mar {
+    margin-top: 79px;
+  }
+  .rama {
+    margin-top: 23px !important;
+  }
+  .man {
+    margin-top: 65px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .take__wrap-auto-models--bisness-1--size {
+    margin-top: 78px;
+  }
+  .take__wrap-auto-models--exclusive-1--size {
+    margin-top: 141px !important;
+  }
+  .take__wrap-auto-models:nth-child(2n) {
+    margin-top: 1px;
+  }
+  .take__wrap-auto-models:nth-child(4n) {
+    margin-top: 22px;
+  }
+  .take__wrap-auto-models:nth-child(6n) {
+    margin-top: 59px;
+  }
+  .take__wrap-auto-models:nth-child(8n) {
+    margin-top: 64px;
+  }
+  .take__wrap-auto {
+    width: 980px;
+  }
+  .take__wrap-auto-models {
+    width: 47.5%;
+  }
+  .take__wrap-auto-models-info {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .take__wrap-auto-models-btns {
+    margin: 0 10px;
+  }
+  .take__wrap-auto-models-title--size {
+    margin-top: -30px;
+  }
+  .take__wrap-auto-models-title--monde {
+    margin-top: 59px;
+  }
+  .take__wrap-title {
+    font-size: 60px;
+  }
+  .take__wrap-filter {
+    display: none;
+  }
+  .take__wrap-filter-desk {
+    display: block;
+    width: 520px;
+    height: 67px;
+    margin: 0 auto;
+  }
+  .take__wrap-filter-desk-one {
+    color: #fff;
+    margin: -2px;
+    padding: 0;
+    font-size: 20px;
+    width: 121px;
+    height: 63px;
+    background-color: transparent;
+    border: 2px solid #c31500;
+    color: #c31500;
+    outline: none;
+  }
+  .take__wrap-filter-desk-one:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 83px;
+  }
+  .take__wrap-filter-desk-one:nth-child(2n) {
+    border-left: none;
+    width: 147px;
+  }
+  .take__wrap-filter-desk-one:nth-child(3n) {
+    border-left: none;
+    width: 110px;
+  }
+  .take__wrap-filter-desk-one:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 130px;
+  }
+  .one {
+    border-radius: 20px;
+    width: 100%;
+    margin: 0;
+    height: auto;
+    padding-top: 20px;
+    position: relative;
+  }
+  .one:not(:last-child):before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 1px;
+    height: 40px;
+    background-color: black;
+  }
+}
+
+@media (min-width: 1440px) {
+  .man {
+    margin-top: 62px !important;
+  }
+  .take__wrap-filter-desk {
+    width: 560px;
+  }
+  .take__wrap-filter-desk-one:first-child {
+    width: 133px;
+  }
+  .take__wrap-filter-desk-one:nth-child(3n) {
+    width: 133px;
+  }
+  .take__wrap-filter-desk-one:last-child {
+    width: 135px;
+  }
+  .take__wrap-auto {
+    width: 1179px;
+    margin-bottom: 120px;
+  }
+  .take__wrap-auto-models:nth-child(6n) {
+    margin-top: 27px;
+  }
+  .take__wrap-auto-models-btns-more {
+    width: 145px;
+  }
+  .take__wrap-auto-models-btns-book {
+    width: 155px;
+  }
+}
+
+.flood {
+  background-color: #c31500;
+  color: #fff;
+}
+
+.exclusive {
+  display: block;
+}
+
+.standart {
+  display: block;
+}
+
+.bisness {
+  display: block;
+}
+
+.take__wrap-auto-models-title--mford {
+  margin-top: 67px !important;
+}
+
+.advantages {
+  background-color: #fff;
+  text-align: center;
+}
+
+.advantages__wrap {
+  padding: 7px;
+}
+
+.advantages__title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 25px;
+  line-height: 1.5;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages__list-items-cartoon {
+  width: 150px;
+  height: 150px;
+}
+
+.advantages__list-items-title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+@media (min-width: 1024px) {
+  .advantages__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1020px;
+    margin: 0 auto;
+  }
+  .advantages__title {
+    font-size: 60px;
+  }
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .advantages__list-items {
+    width: 335px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .advantages__list-items {
+    width: 428px;
+    padding: 0 55px;
+    padding-top: 40px;
+  }
+  .advantages__list-items:nth-child(4n) {
+    padding: 30px 0;
+    margin-right: 116px;
+  }
+  .advantages__list-items:last-child {
+    padding: 28px 0;
+  }
+  .advantages__list-items-title {
+    font-size: 31px;
+  }
+  .advantages__wrap {
+    width: 1300px;
+  }
+  .advantages__title {
+    margin: 0;
+  }
+}
+
+.qs {
+  width: 100%;
+}
+
+.qs--size {
+  margin: 50px 0;
+}
+
+.qs__wrap {
+  padding: 7px;
+  text-align: center;
+}
+
+.qs__title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.qs__description {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  padding-top: 15px;
+}
+
+.qs__cartoon {
+  width: 95px;
+  height: 95px;
+}
+
+.qs__btns-info {
+  margin-top: 20px;
+}
+
+.qs__btns-link {
+  font-family: "Ubuntu", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 600;
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #43d854;
+  background-position: center center;
+  border-color: #ffffff;
+  border-style: solid;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 25px;
+}
+
+.qs__btns-telega {
+  color: #fff;
+  font-family: "Ubuntu", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 600;
+  font-size: 18px;
+  border-width: 1px;
+  border-radius: 5px;
+  background-color: #0088cc;
+  background-position: center center;
+  border-color: #ffffff;
+  text-decoration: none;
+  border-style: solid;
+  padding: 10px 30px;
+}
+
+@media (min-width: 500px) {
+  .qs__btns {
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+  }
+  .qs__btns-info {
+    margin-right: 15px;
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .qs__wrap {
+    position: relative;
+  }
+  .qs__btns {
+    margin-top: 20px;
+  }
+  .qs__btns-link {
+    font-size: 22px;
+  }
+  .qs__btns-telega {
+    font-size: 22px;
+  }
+  .qs__cartoon {
+    position: absolute;
+    top: 96px;
+    margin-left: 265px;
+    width: 140px;
+    height: 140px;
+  }
+  .qs__title {
+    font-size: 60px;
+  }
+  .qs__description {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .qs__btns {
+    margin-top: 79px;
+  }
+  .qs__description {
+    padding-top: 33px;
+    font-size: 31px;
+    padding-right: 137px;
+  }
+  .qs__cartoon {
+    top: 106px;
+    margin-left: 150px;
+  }
+  .qs__wrap::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/phone.webp");
+    width: 300px;
+    top: 67px;
+    margin-left: 330px;
+    height: 339px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transform: rotate(-7deg);
+  }
+}
+
+.online {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.online__wrap {
+  padding: 7px;
+  text-align: center;
+}
+
+.online__wrap-right {
+  margin-top: 50px;
+}
+
+.online__wrap-left-title {
+  text-align: center;
+  color: #c31500;
+  font-size: 44px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.online__wrap-left-description {
+  color: #c31500;
+  font-size: 24px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.online__wrap-left-adress {
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.online__wrap-left-adress-description {
+  padding: 0 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.online__wrap-left-phone {
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.online__wrap-left-phone-link {
+  font-size: 15px;
+  font-family: "Ubuntu", sans-serif;
+  padding-top: 20px;
+  padding-left: 13px;
+  text-decoration: none;
+  color: #000;
+}
+
+.online__wrap-left-email {
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  padding-top: 20px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+.online__wrap-left-email-link {
+  font-size: 15px;
+  font-family: "Ubuntu", sans-serif;
+  padding-top: 20px;
+  padding-left: 13px;
+  text-decoration: none;
+  color: #000;
+}
+
+.online__wrap-left-social {
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.online__wrap-left-social--one {
+  margin-top: 25px;
+  margin-left: 5px;
+}
+
+.online__wrap-left-telega {
+  text-decoration: none;
+}
+
+.online__wrap-left-telega--icon {
+  margin-top: 20px;
+}
+
+.online__wrap-left-whatsapp {
+  text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  .online__wrap-left-social--one {
+    display: none;
+  }
+  .online__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .online__wrap-left {
+    width: 400px;
+  }
+  .online__wrap-left-title {
+    text-align: left;
+  }
+  .online__wrap-right {
+    width: 540px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .online__wrap {
+    margin-top: 120px;
+  }
+  .online__wrap-right {
+    width: 710px;
+    margin-top: 25px;
+  }
+  .online__wrap-left {
+    width: 435px;
+  }
+  .online__wrap-left-social {
+    padding-left: 0;
+  }
+  .online__wrap-left-title {
+    font-size: 44px;
+  }
+  .online__wrap-left-description {
+    font-size: 24px;
+    padding-left: 0;
+  }
+  .online__wrap-left-adress {
+    padding-left: 0;
+    font-size: 20px;
+  }
+  .online__wrap-left-adress-description {
+    padding-left: 0;
+    font-size: 20px;
+  }
+  .online__wrap-left-phone {
+    padding-left: 0;
+    font-size: 20px;
+  }
+  .online__wrap-left-phone-link {
+    padding-left: 0;
+    font-size: 20px;
+  }
+  .online__wrap-left-email {
+    padding-left: 0;
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  .online__wrap-left-email-link {
+    padding-left: 0;
+    font-size: 20px;
+  }
+}
+
+.about {
+  width: 100%;
+  display: none;
+}
+
+.about__wrap {
+  padding: 7px;
+  text-align: center;
+}
+
+.about__wrap-title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.about__wrap-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 50px;
+}
+
+.about__wrap-list-items {
+  background-color: #fff;
+  border-radius: 20px;
+  height: 800px;
+  margin: 20px 20px;
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.about__wrap-list-items-link {
+  width: 165px;
+  height: 45px;
+  background-color: #c31500;
+  margin: 0 auto;
+  border-radius: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  padding-top: 14px;
+}
+
+.about__wrap-list-items-link-info {
+  text-decoration: none;
+  color: #fff;
+}
+
+.about__wrap-list-items-cartoon {
+  margin-top: 30px;
+}
+
+.about__wrap-list-items-title {
+  text-align: left;
+  padding-left: 15px;
+  padding-top: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.about__wrap-list-items-description {
+  text-align: left;
+  padding: 0 15px;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  line-height: 3.5;
+}
+
+@media (min-width: 500px) {
+  .about__wrap-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 490px;
+    margin: 0 auto;
+  }
+  .about__wrap-list-items {
+    width: 45.5%;
+    margin: 24px 11px;
+    height: 923px;
+  }
+  .about__wrap-list-items-cartoon--size {
+    margin-top: 22px;
+  }
+  .about__wrap-list-items-title--size {
+    padding-top: 10px;
+  }
+  .about__wrap-list-items-title--size-one {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about__wrap-title {
+    font-size: 62px;
+  }
+  .about__wrap-list {
+    width: 950px;
+  }
+  .about__wrap-list-items {
+    width: 22.5%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .about__wrap-list {
+    width: 1170px;
+  }
+  .about__wrap-list-items {
+    height: 785px;
+  }
+}
+
+.contact {
+  width: 100%;
+  background-color: #fff;
+}
+
+.contact__wrap {
+  padding: 7px;
+  text-align: center;
+}
+
+.contact__wrap-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.contact__wrap-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.contact__wrap-list-items {
+  padding: 10px 0;
+}
+
+.contact__wrap-list-items-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.contact__wrap-info {
+  padding-left: 10px;
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    background-color: #fff;
+  }
+  .contact__position {
+    justify-content: center;
+    width: 980px;
+    display: flex;
+    margin: 0 auto;
+  }
+  .contact__wrap {
+    display: flex;
+    width: 100%;
+    padding: 7px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .contact__wrap-logo {
+    padding-top: 46px;
+  }
+  .contact__wrap-list-items-title {
+    text-transform: uppercase;
+  }
+  .contact__wrap-info-title {
+    padding-top: 10px;
+    text-transform: uppercase;
+  }
+  .contact__wrap-info-description {
+    padding-top: 19px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact__position {
+    width: 1180px;
+  }
+  .contact__wrap {
+    text-align: left;
+    justify-content: flex-start;
+    margin: 30px auto;
+  }
+  .contact__wrap-list {
+    padding-left: 123px;
+    padding-top: 30px;
+  }
+  .contact__wrap-list-items-title {
+    margin: 0;
+  }
+  .contact__wrap-list--size {
+    padding-left: 170px;
+  }
+  .contact__wrap-info {
+    padding: 0;
+    padding-left: 105px;
+    padding-top: 30px;
+  }
+  .contact__wrap-info-title {
+    margin: 0;
+  }
+  .contact__wrap-info-description {
+    margin: 0;
+    padding-top: 20px;
+  }
+}
+
+.conditions__wrap {
+  text-align: center;
+  padding: 7px;
+}
+
+.conditions__wrap-bron {
+  width: 300px;
+  height: 50px;
+  background-color: #c31500;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+.conditions__wrap-bron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0));
+  transform: translateX(-6px);
+  -webkit-animation: light-lg ease 4s infinite;
+  animation: light-lg ease 4s infinite;
+}
+
+.conditions__wrap-predict {
+  margin-top: 40px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.conditions__wrap-next {
+  border-bottom: 1px solid #c31500;
+  border-top: 1px solid #c31500;
+}
+
+.conditions__wrap-next-yur {
+  margin-top: 30px;
+  position: relative;
+}
+
+.conditions__wrap-next-yur-title {
+  color: #c31500;
+  padding-right: 60px;
+}
+
+.conditions__wrap-next-yur-title--icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  top: 0px;
+  right: 20px;
+  transition: all ease-out 0.3s;
+  transform: rotate(0deg);
+}
+
+.conditions__wrap-next-yur-list {
+  text-align: left;
+  opacity: 0;
+  height: 0;
+  transition: all ease-out 0.3s;
+}
+
+.conditions__wrap-next-yur-list-items {
+  z-index: -1;
+}
+
+.conditions__wrap-next-fiz {
+  position: relative;
+  border-bottom: 1px solid #c31500;
+}
+
+.conditions__wrap-next-fiz-list {
+  text-align: left;
+  opacity: 0;
+  height: 0;
+  transition: all ease-out 0.3s;
+}
+
+.conditions__wrap-next-fiz-title {
+  color: #c31500;
+  padding-right: 50px;
+}
+
+.conditions__wrap-next-fiz-title--icon {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 0;
+  right: 20px;
+  transition: all ease-out 0.3s;
+  transform: rotate(0deg);
+}
+
+.conditions__wrap-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.conditions__wrap-list-icon {
+  transform: rotate(90deg);
+}
+
+.conditions__wrap-list-items {
+  padding: 40px 0;
+  position: relative;
+}
+
+.conditions__wrap-list-items:not(:last-child):before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/arrow.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 44px;
+  margin-left: 36px;
+  top: 309px;
+  transition: all ease-out 0.3s;
+  transform: rotate(90deg);
+}
+
+.conditions__wrap-list-items-picture {
+  width: 100px;
+  height: 100px;
+}
+
+.conditions__wrap-list-items-title {
+  color: #c31500;
+  font-size: 24px;
+}
+
+.conditions__wrap-list-items-description {
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.conditions__wrap-title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.opened {
+  opacity: 1;
+  height: 160px;
+  margin: auto;
+  padding: auto;
+  width: auto;
+  transition: all ease-out 0.3s;
+  z-index: 1;
+}
+
+.anim {
+  transition: all ease-out 0.3s;
+  transform: rotate(45deg);
+}
+
+@-webkit-keyframes light-lg {
+  40% {
+    transform: translateX(290px);
+  }
+  100% {
+    transform: translateX(290px);
+  }
+}
+
+@keyframes light-lg {
+  40% {
+    transform: translateX(290px);
+  }
+  100% {
+    transform: translateX(290px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .conditions__wrap {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .conditions__wrap-title {
+    font-size: 42px;
+  }
+  .conditions__wrap-next {
+    width: 780px;
+    margin: 0 auto;
+  }
+  .conditions__wrap-bron {
+    width: 780px;
+  }
+  .conditions__wrap-bron::before {
+    -webkit-animation: light ease 4s infinite;
+    animation: light ease 4s infinite;
+  }
+  .conditions__wrap-predict {
+    width: 780px;
+    margin: 50px auto;
+  }
+  .conditions__wrap-list {
+    display: flex;
+    justify-content: center;
+  }
+  .conditions__wrap-list-items {
+    padding: 40px 40px;
+  }
+  .conditions__wrap-list-items:not(:last-child):before {
+    margin-left: 160px;
+    top: 68px;
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes light {
+  40% {
+    transform: translateX(780px);
+  }
+  100% {
+    transform: translateX(780px);
+  }
+}
+
+@keyframes light {
+  40% {
+    transform: translateX(780px);
+  }
+  100% {
+    transform: translateX(780px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .conditions__wrap {
+    width: 1340px;
+    margin: 0 auto;
+  }
+  .conditions__wrap-next {
+    width: 1025px;
+  }
+  .conditions__wrap-predict {
+    font-size: 22px;
+    width: 1200px;
+  }
+  .conditions__wrap-bron {
+    width: 1280px;
+    height: 80px;
+  }
+  .conditions__wrap-bron::before {
+    -webkit-animation: ultra ease 4s infinite;
+    animation: ultra ease 4s infinite;
+  }
+}
+
+@-webkit-keyframes ultra {
+  40% {
+    transform: translateX(1280px);
+  }
+  100% {
+    transform: translateX(1280px);
+  }
+}
+
+@keyframes ultra {
+  40% {
+    transform: translateX(1280px);
+  }
+  100% {
+    transform: translateX(1280px);
+  }
+}
+
+.charak {
+  margin-top: 60px;
+}
+
+.charak__wrap {
+  padding: 7px;
+}
+
+.charak__wrap-right {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.charak__wrap-right-link {
+  width: 22%;
+  margin: 0 4.6px;
+}
+
+.charak__wrap-right-link:first-child {
+  width: 100%;
+}
+
+.charak__wrap-left {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.charak__title {
+  color: #c31500;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.charak__description {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.charak__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.charak__list-items {
+  padding: 4px 16px;
+  margin: 0 auto;
+  width: 102px;
+}
+
+.charak__list-items-description {
+  height: 25px;
+  padding-top: 2px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.charak__list-items-description-two {
+  color: #c31500;
+  font-family: "Ubuntu", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+.charak__bron {
+  width: 195px;
+  height: 45px;
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.55;
+  font-weight: 600;
+  border-radius: 20px;
+  background-color: #c31500;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.charak__me {
+  font-family: "Ubuntu", Arial, sans-serif;
+  line-height: 2;
+}
+
+.charak__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.charak__main-items {
+  display: flex;
+  background-color: #fff;
+  flex-wrap: wrap;
+  width: 200px;
+  margin: 10px auto;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.charak__main-items-icon {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.charak__main-items-icon-1 {
+  margin-left: 5px;
+}
+
+.charak__main-items-icon-3 {
+  margin-left: 5px;
+}
+
+.charak__main-items-title {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  padding-top: 5px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.charak__main-items-title-1 {
+  padding-left: 9px;
+}
+
+.charak__main-items-title-3 {
+  padding-left: 9px;
+}
+
+.charak__main-items-title-7 {
+  padding-left: 13px;
+}
+
+.charak__main-items-title-5 {
+  padding-left: 16px;
+}
+
+.charak__main-items-description {
+  margin: 0;
+  padding-left: 57px;
+  padding-top: -52px;
+  margin-top: -16px;
+  color: #c31500;
+  font-size: 16px;
+}
+
+.charak__main-title {
+  font-size: 24px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.charak-title {
+  font-size: 24px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  margin-top: 60px;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  .charak__main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .charak__main-items {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .charak__wrap-right-1 {
+    height: 653px;
+  }
+  .charak__wrap-right-2 {
+    height: 655px !important;
+  }
+  .charak__wrap-right-3 {
+    height: 655px !important;
+  }
+  .charak__wrap-right-5 {
+    height: 660px !important;
+  }
+  .charak__wrap-right-6 {
+    height: 498px !important;
+  }
+  .charak__wrap-right-7 {
+    height: 655px !important;
+  }
+  .charak__wrap-right-8 {
+    height: 585px !important;
+  }
+  .charak__wrap-right-9 {
+    height: 500px !important;
+  }
+  .charak__main {
+    justify-content: flex-start;
+  }
+  .charak__main-title {
+    text-align: left;
+    margin-top: 20px;
+  }
+  .charak__main-items {
+    text-align: left;
+    width: 165px;
+  }
+  .charak__main-items-description {
+    font-size: 13px;
+    margin-top: -21px;
+  }
+  .charak__main-items-title {
+    font-size: 10px;
+  }
+  .charak__main-items-title-1 {
+    margin-bottom: 21px;
+    padding-left: 11px;
+  }
+  .charak__main-items-title-3 {
+    padding-bottom: 21px;
+  }
+  .charak__main-items-title-4 {
+    padding-bottom: 21px;
+  }
+  .charak__main-items-title-5 {
+    padding-bottom: 21px;
+  }
+  .charak__main-items-title-6 {
+    padding-bottom: 21px;
+  }
+  .charak__main-items-title-7 {
+    padding-bottom: 21px;
+  }
+  .charak__me {
+    font-size: 15px;
+    padding-right: 86px;
+    line-height: 2.2;
+  }
+  .charak__description {
+    margin-bottom: 0;
+  }
+  .charak__list {
+    text-align: center;
+  }
+  .charak__list-items {
+    padding: 4px 4px;
+    margin: 0;
+    width: 78px;
+  }
+  .charak__list-items:first-child {
+    padding-left: 0;
+  }
+  .charak__wrap {
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .charak__wrap-right {
+    width: 435px;
+    height: 577px;
+  }
+  .charak__wrap-right-link {
+    height: 0;
+    width: 22.7%;
+    margin: 0 5px;
+  }
+  .charak__wrap-left {
+    width: 559px;
+    margin: 0;
+    text-align: left;
+    padding-left: 20px;
+  }
+  .charak__title {
+    margin: 0;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1440px) {
+  .charak__wrap-right-1 {
+    height: 1084px;
+  }
+  .charak__wrap-right-2 {
+    height: 1091px !important;
+  }
+  .charak__wrap-right-3 {
+    height: 1084px !important;
+  }
+  .charak__wrap-right-5 {
+    height: 1095px !important;
+  }
+  .charak__wrap-right-6 {
+    height: 820px !important;
+  }
+  .charak__wrap-right-7 {
+    height: 1095px !important;
+  }
+  .charak__wrap-right-8 {
+    height: 975px !important;
+  }
+  .charak__wrap-right-9 {
+    height: 820px !important;
+  }
+  .charak-1 {
+    margin-bottom: 80px;
+  }
+  .charak__wrap {
+    height: 750px;
+  }
+  .charak__wrap-left {
+    width: 608px;
+  }
+  .charak__wrap-right {
+    width: 720px;
+    height: 959px;
+  }
+  .charak__wrap-right-link {
+    width: 23.6%;
+  }
+}
+
+.wrapper {
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper__edition {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  text-align: center;
+  transition: 0.5s all;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper__edition-nice {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  text-align: center;
+  transition: 0.5s all;
+  background: rgba(0, 0, 0, 0.5);
+  padding-top: 155px;
+  display: none;
+}
+
+.wrapper__edition-nice-pos {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.wrapper__edition-nice-pos--cartoon {
+  width: 150px;
+  height: 194px;
+}
+
+.wrapper__edition-nice-pos-exl {
+  background-color: blue;
+  color: #fff;
+  outline: none;
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.wrapper__edition-nice-pos-title {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.wrapper__edition::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #161519 url("../img/loading.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+  z-index: 8000;
+}
+
+.wrapper__edition._sending {
+  display: block;
+}
+
+.wrapper__edition-nice._sending {
+  display: block;
+}
+
+.wrapper__edition._sending::after {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.form-popup__item ._error {
+  box-shadow: 0 0 5px red;
+}
+
+.checkbox._error {
+  box-shadow: none;
+}
+
+.checkbox._error .checkbox__label::before {
+  box-shadow: 0 0 5px red;
+}
+
+.wrapper--show {
+  display: none;
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__label {
+  position: relative;
+}
+
+.checkbox__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -45px;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #c31500;
+  margin-left: 10px;
+}
+
+.checkbox__label::after {
+  content: "";
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -32px;
+  height: 60px;
+  width: 15px;
+  height: 8px;
+  border-top: 2px solid #c31500;
+  border-right: 2px solid #c31500;
+  transform: rotate(137deg);
+  display: none;
+}
+
+.checkbox__input:checked+.checkbox__label::after {
+  display: block;
+}
+
+.form-popup {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  color: #000;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.form-popup__btns {
+  margin-top: 30px;
+  margin-left: 26px;
+  width: 50px;
+  height: 50px;
+  background-color: #c31500;
+  border: none;
+  outline: none;
+  position: relative;
+  border-radius: 50%;
+}
+
+.form-popup__btns::after {
+  position: absolute;
+  margin-left: 0px;
+  top: 7px;
+  content: " ";
+  height: 35px;
+  width: 2px;
+  background-color: #fff;
+}
+
+.form-popup__btns::before {
+  position: absolute;
+  margin-left: 0px;
+  top: 7px;
+  content: " ";
+  height: 35px;
+  width: 2px;
+  background-color: #fff;
+}
+
+.form-popup__btns::before {
+  transform: rotate(45deg);
+}
+
+.form-popup__btns::after {
+  transform: rotate(-45deg);
+}
+
+.form-popup__title {
+  margin-top: 100px;
+}
+
+.form-popup__button {
+  color: #ffffff;
+  background-color: #c31500;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  width: 280px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.form-popup__input {
+  border-radius: 20px;
+  width: 280px;
+  height: 50px;
+  border: 1px solid #c31500;
+  outline: none;
+  padding-left: 20px;
+}
+
+.form-popup__input--icon {
+  position: absolute;
+  margin-left: -45px;
+  top: 9px;
+  width: 25px;
+  height: 50px;
+  pointer-events: none;
+}
+
+.form-popup__item {
+  position: relative;
+  padding: 10px 0;
+}
+
+.form-popup__item-take {
+  width: 280px;
+  height: 60px;
+  border-radius: 20px;
+  border: 1px solid #c31500;
+  outline: none;
+  padding-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@media (min-width: 1024px) {
+  .form-popup {
+    width: 55%;
+    margin: 0 auto;
+  }
+  .form-popup__item-take {
+    width: 450px;
+  }
+  .form-popup__input {
+    width: 450px;
+  }
+}
+
+.whatsapp-button {
+  position: fixed;
+  right: 13px;
+  bottom: 13px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  color: #fff;
+  text-align: center;
+  line-height: 55px;
+  font-size: 30px;
+  z-index: 9999;
+}
+
+.whatsapp-button:after,
+.whatsapp-button:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  border: 1px solid #25d366;
+  left: -10px;
+  right: -10px;
+  top: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  -webkit-animation: animate 1.5s linear infinite;
+  animation: animate 1.5s linear infinite;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.whatsapp-button--icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.whatsapp-button:after {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.whatsapp-button:after,
+.whatsapp-button:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  border: 1px solid #25d366;
+  left: -10px;
+  right: -10px;
+  top: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  -webkit-animation: animate 1.5s linear infinite;
+  animation: animate 1.5s linear infinite;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@media (max-width: 800px) {
+  .whatsapp-button {
+    bottom: -10px;
+    right: -10px;
+  }
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+
+/*# sourceMappingURL=style.css.map */

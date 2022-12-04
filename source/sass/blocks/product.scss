@@ -1,0 +1,30 @@
+.product {
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 35px;
+&-one{
+text-align: center;
+}
+        &-pos {
+            display: flex;
+            justify-content: center;
+            &-three {
+                display: flex;
+                flex-direction: column;
+                margin: 50px auto;
+                &-btn{
+                    width: 150px;
+                    height: 55px;
+                  margin-top: 50px;
+                  text-transform: uppercase;
+                }
+            }
+            &-two {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

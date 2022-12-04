@@ -1,0 +1,36 @@
+@font-face {
+  font-weight: normal;
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Ubuntu-Regular.woff") format("woff");
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+  color: #000;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #ebebeb;
+  background-size: cover;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  scrollbar-width: none;
+  box-sizing: border-box;
+}

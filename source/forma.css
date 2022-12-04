@@ -1,0 +1,254 @@
+.wrapper {
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.wrapper__edition {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  text-align: center;
+  transition: 0.5s all;
+  background: rgba(0, 0, 0, 0.5);
+}
+.wrapper__edition-nice {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  text-align: center;
+  transition: 0.5s all;
+  background: rgba(0, 0, 0, 0.5);
+  padding-top: 155px;
+  display: none;
+}
+.wrapper__edition-nice-pos {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  border-radius: 5px;
+}
+.wrapper__edition-nice-pos--cartoon {
+  width: 150px;
+  height: 194px;
+}
+.wrapper__edition-nice-pos-exl {
+  background-color: blue;
+  color: #fff;
+  outline: none;
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.wrapper__edition-nice-pos-title {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.wrapper__edition::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #161519;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+  z-index: 8000;
+}
+
+.wrapper__edition._sending {
+  display: block;
+}
+
+.wrapper__edition-nice._sending {
+  display: block;
+}
+
+.wrapper__edition._sending::after {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.form-popup__item ._error {
+  box-shadow: 0 0 5px red;
+}
+
+.checkbox._error {
+  box-shadow: none;
+}
+
+.checkbox._error .checkbox__label::before {
+  box-shadow: 0 0 5px red;
+}
+
+.wrapper--show {
+  display: none;
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__label {
+  position: relative;
+}
+.checkbox__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -45px;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #c31500;
+  margin-left: 10px;
+}
+
+.checkbox__label::after {
+  content: "";
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -32px;
+  height: 60px;
+  width: 15px;
+  height: 8px;
+  border-top: 2px solid #c31500;
+  border-right: 2px solid #c31500;
+  transform: rotate(137deg);
+  display: none;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  display: block;
+}
+
+.form-popup {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  color: #000;
+  overflow-y: auto;
+  height: 100%;
+}
+.form-popup__btns {
+  margin-top: 30px;
+  margin-left: 26px;
+  width: 50px;
+  height: 50px;
+  background-color: #c31500;
+  border: none;
+  outline: none;
+  position: relative;
+  border-radius: 50%;
+}
+.form-popup__btns::after {
+  position: absolute;
+  margin-left: 0px;
+  top: 7px;
+  content: " ";
+  height: 35px;
+  width: 2px;
+  background-color: #fff;
+}
+.form-popup__btns::before {
+  position: absolute;
+  margin-left: 0px;
+  top: 7px;
+  content: " ";
+  height: 35px;
+  width: 2px;
+  background-color: #fff;
+}
+.form-popup__btns::before {
+  transform: rotate(45deg);
+}
+.form-popup__btns::after {
+  transform: rotate(-45deg);
+}
+.form-popup__title {
+  margin-top: 100px;
+}
+.form-popup__button {
+  color: #ffffff;
+  background-color: #c31500;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  width: 280px;
+  height: 50px;
+  margin-top: 20px;
+}
+.form-popup__input {
+  border-radius: 20px;
+  width: 280px;
+  height: 50px;
+  border: 1px solid #c31500;
+  outline: none;
+  padding-left: 20px;
+}
+.form-popup__input--icon {
+  position: absolute;
+  margin-left: -45px;
+  top: 9px;
+  width: 25px;
+  height: 50px;
+  pointer-events: none;
+}
+.form-popup__item {
+  position: relative;
+  padding: 10px 0;
+}
+.form-popup__item-take {
+  width: 280px;
+  height: 60px;
+  border-radius: 20px;
+  border: 1px solid #c31500;
+  outline: none;
+  padding-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@media (min-width: 1024px) {
+  .form-popup {
+    width: 55%;
+    margin: 0 auto;
+  }
+  .form-popup__item-take {
+    width: 450px;
+  }
+  .form-popup__input {
+    width: 450px;
+  }
+}
